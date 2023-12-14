@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Machine Learning App</title>
+    </head>
+    
+    <body>
+        <form name="form", method="POST">
+
+            		<br>
+            		diplôme: <input type="text" name="diplome", placeholder="Enter diplome" required/><br>
+            		<br><br>
+	    		Année d'expérience: <input type="number" name="annee_experiences", placeholder="Entrer année d'expérience" required/><br>
+            		<br><br>
+ 	    		nom du projet: <input type="text" name="nom_projet", placeholder="Entrer nom du projet" required/><br>
+            		<br><br>
+	    		précision du service recherché: <input type="text" name="service_recherche", placeholder="Entrer la précision du service recherché" required/><br>
+            		<br><br>
+	    		compétences: <input type="text" name="competence", placeholder="Entrer les compétences" required/><br>
+            		<br><br>
+			nombre_expert: <input type="number" name="nombre_expert_predire", placeholder="Entrer le nombre d'experts" required/><br>
+            		<br><br>
+	    	</div>
+            <button value="Submit">Run</button>
+        </form>
+
+    <h1>Prediction Results</h1>
+	<ul>
+  {% for prediction in predictions %}
+    <li>{{ prediction }}</li>
+  {% endfor %}
+	</ul>
+	
+        
+    </body>
+</html>
